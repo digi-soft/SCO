@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    background-color: #eff1fe;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+    opacity: 1;
+    transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
+    width: 100%;
+    z-index: 1;
+    .navbar {
+        padding-top: 1.75em;
+        width: 100%;
+        .logo {
+            width: 100%;
+            height: auto;
+            img {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .toggle {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            text-decoration: none;
+            color: #22103f;
+            .label {
+               
+                top: 0;
+                font-size: 25px;
+            }
+            .cheeseburger {
+               
+                top: 20px;
+                right: 20px;
+                padding: 25px;
+                font-size: 20px;
+                cursor: pointer;
+                background-image: url('../image/menu/kapat.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
