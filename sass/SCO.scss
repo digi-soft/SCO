@@ -4,8 +4,12 @@ body, html {
     padding: 0;
 }
 
+.clear {
+    clear: both;
+}
+
 .navigation-menu {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     background-color: transparent;
@@ -14,12 +18,57 @@ body, html {
     z-index: 5;
     overflow: hidden;
     opacity: 1;
+    -webkit-transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
+    -moz-transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
+    -ms-transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
+    -o-transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
     transition: height 250ms ease-in-out, background-color 250ms ease-in-out, box-shadow 166.66666667ms ease-in-out;
     width: 100%;
     z-index: 1;
     .navbar {
         padding-top: 1.75em;
         width: 100%;
+        .social-media {
+            position: absolute;
+            -webkit-transition: opacity 250ms ease-in-out;
+            -moz-transition: opacity 250ms ease-in-out;
+            -ms-transition: opacity 250ms ease-in-out;
+            -o-transition: opacity 250ms ease-in-out;
+            transition: opacity 250ms ease-in-out;
+            left: 20px;
+            a {
+                background-color: #f6f7ff;
+                border: 1px solid #cdd3fd;
+                border-radius: 50%;
+                height: 1.5em;
+                padding: .5em;
+                width: 1.5em;
+                &.button {
+                    display: inline-block;
+                }
+                &:hover {
+                    background-color: #121746 !important;
+                }
+                &:hover svg {
+                    fill: #f6f7ff !important;
+                }
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    transform-origin: 50% 50% 0px;
+                    fill: #121746;
+                    &.svg {
+                        -webkit-transition: opacity 250ms ease-in-out;
+                        -moz-transition: opacity 250ms ease-in-out;
+                        -ms-transition: opacity 250ms ease-in-out;
+                        -o-transition: opacity 250ms ease-in-out;
+                        transition: opacity 250ms ease-in-out;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
         .logo {
             width: 100%;
             height: auto;
@@ -35,12 +84,11 @@ body, html {
             text-decoration: none;
             color: #22103f;
             .label {
-               
                 top: 0;
                 font-size: 25px;
+                margin-right: 20px;
             }
             .cheeseburger {
-               
                 top: 20px;
                 right: 20px;
                 padding: 25px;
@@ -53,6 +101,64 @@ body, html {
                 &:hover {
                     opacity: .5;
                 }
+            }
+        }
+    }
+    .nav-content {
+        height: calc(100% - 400px);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: relative;
+        
+        margin-bottom: 60px;
+        .box-shadow{
+            box-shadow: inset 0 -119px 53px -34px #eff1fe;
+-webkit-box-shadow: inset 0 -119px 53px -34px #eff1fe;
+-moz-box-shadow: inset 0 -119px 53px -34px #eff1fe;
+-o-box-shadow: inset 0 -119px 53px -34px #eff1fe;
+
+           width: 100%;
+           height: 80px;
+           position: fixed;
+           bottom: 150px;
+        }
+        nav {
+            display: block;
+            text-align: center;
+            ul {
+                list-style-type: none;
+                z-index: 0;
+                margin: 0;
+                padding: 0;
+                li {
+                    font-size: 1.5em;
+                    line-height: 1.22222222em;
+                    width: 100%;
+                    padding: 10px 0;
+                    a {
+                        color: #22103f;
+                        text-decoration: none;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: #eff1fe;
+        transition: bottom 500ms ease-in-out;
+        bottom: -100%;
+        border-top: 1px solid #cdd3fd;
+        position: relative;
+        width: 100%;
+        .container {
+            .address {
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                margin-top: 1em;
+                margin-bottom: 1em;
             }
         }
     }
