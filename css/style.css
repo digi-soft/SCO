@@ -1,0 +1,562 @@
+/*  Ornek Kullanim  .box { @include border-radius(10px); }  */
+@font-face {
+  font-family: 'Trajan';
+  src: url("../css/font/Trajan%20Pro%20Regular.eot");
+  src: url("../css/font/Trajan%20Pro%20Regular.eot?#iefix") format("embedded-opentype"), url("../css/font/TrajanPro-Regular.woff") format("woff"), url("../css/font/Trajan%20Pro%20Regular.woff2") format("woff2"), url("../css/font/TrajanPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #f9f5ec;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Header (Menu) */
+#header {
+  position: absolute;
+  top: 0;
+  font-family: Montserrat, sans-serif;
+  background: none;
+  font-size: 15px;
+  line-height: 21px;
+  color: #ffffff;
+  z-index: 9999;
+  width: 100%;
+}
+#header .head .nav ul {
+  width: 100%;
+  text-align: center;
+}
+#header .head .nav ul li {
+  margin-top: 40px;
+  display: inline-block;
+  float: none;
+  padding: 15px;
+}
+#header .head .nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+#header .head .nav ul li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #ffffff;
+  height: 3px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#header .head .nav ul li a:hover:before, #header .head .nav ul li a:focus:before, #header .head .nav ul li a:active:before {
+  right: 0;
+}
+
+/* Responsive Menu */
+.responsive-menu {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  width: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #00a3e4;
+  padding: 10px;
+  display: none;
+  /* include ile cagir */
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.responsive-menu:hover {
+  cursor: pointer;
+}
+
+ul#responsive-ac {
+  position: fixed;
+  text-align: center;
+  margin: 0 auto;
+  top: 5px;
+  left: 20%;
+  width: 60%;
+  background-color: rgba(67, 67, 67, 0.7);
+  display: none;
+  padding: 10px 10px;
+}
+ul#responsive-ac li {
+  padding: 15px;
+  border-top: 1px solid #f8f8f8;
+}
+ul#responsive-ac li a {
+  color: #fff;
+}
+ul#responsive-ac li:first-child {
+  border-top: none;
+}
+
+.responsive-logo {
+  display: none;
+}
+.responsive-logo img {
+  position: absolute;
+  width: 50px;
+  right: 5px;
+  top: 5px;
+}
+
+/* Ikinci kisim */
+.kisimiki {
+  position: relative;
+  top: 25px;
+  background-color: #f9f5ec;
+  padding-bottom: 100px;
+}
+
+.baslik {
+  font-size: 20px;
+}
+.baslik h3 {
+  font-family: Roboto, serif;
+  color: #0467b2;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 14px;
+}
+.baslik h5 {
+  color: #333333;
+  font-family: "Trajan", serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 38px;
+}
+.baslik i {
+  color: #0467b2;
+}
+.baslik span {
+  color: #0467b2;
+}
+
+.altkisim h4, .parallax-window .aktivite h4 {
+  color: #333333;
+  font-family: "Trajan",serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+.altkisim p, .parallax-window .aktivite p {
+  font-size: 15px;
+  color: #333333;
+  font-family: Lato, sans-serif;
+  line-height: 24px;
+}
+
+/* Odalar */
+.odalarimiz, .odafoto {
+  background-color: #ece7dd;
+  padding-bottom: 100px;
+}
+.odalarimiz img, .odafoto img {
+  width: 100%;
+  height: 199px;
+}
+
+.odafoto {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.odabilgileri {
+  width: 100%;
+  text-align: center;
+  padding: 57px 0 93px 0;
+}
+.odabilgileri h3 {
+  font-family: "Trajan",serif;
+  font-weight: 400;
+  color: #0467b2;
+  font-size: 22px;
+  padding-bottom: 55px;
+}
+.odabilgileri ul.ozel {
+  display: table;
+  margin: 0 auto;
+}
+.odabilgileri ul.ozel li {
+  display: block;
+  float: left;
+  position: relative;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: #333;
+  width: 100%;
+  text-align: left;
+}
+.odabilgileri ul.ozel li span {
+  color: #0467b2;
+}
+
+/* Aktiviteler */
+.parallax-window {
+  padding-bottom: 100px;
+}
+.parallax-window ul#tab {
+  margin: 0 auto;
+  text-align: center;
+  width: 65.7%;
+}
+.parallax-window ul#tab li {
+  width: 20%;
+  height: 120px;
+  float: left;
+  margin: auto 0;
+  background-color: #eeefed;
+  color: #343433;
+}
+.parallax-window ul#tab li:hover {
+  cursor: pointer;
+}
+.parallax-window ul#tab li:hover span {
+  color: #0467b2;
+}
+.parallax-window ul#tab li i {
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.parallax-window ul#tab li span {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.parallax-window ul#tab li.aktif {
+  background-color: #fff;
+}
+.parallax-window ul#tab li.aktif span {
+  color: #0467b2;
+}
+.parallax-window .bgactivity {
+  padding: 70px 70px;
+  background-color: #fff;
+}
+.parallax-window .aktivite img {
+  height: 256px;
+  width: 100%;
+}
+.parallax-window .aktivite h4 {
+  color: #333333;
+  font-family: "Trajan",serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+/* Class Bahce-Salon */
+.class-bahce-salon {
+  background-color: #e3ded3;
+}
+.class-bahce-salon h4 {
+  margin-top: 30px;
+}
+.class-bahce-salon img {
+  padding: 30px;
+}
+
+/* Iletisim */
+.iletisim {
+  background-color: #f9f5ec;
+  /* Footer */
+}
+.iletisim p {
+  font-family: Lato, sans-serif;
+  color: #333333;
+  font-size: 16px;
+  line-height: 21px;
+}
+.iletisim form {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+.iletisim form input {
+  width: 100%;
+}
+.iletisim form textarea {
+  width: 100%;
+}
+.iletisim form label {
+  padding: 15px 0 0 0;
+}
+.iletisim form i#face, .iletisim form i#twit, .iletisim form i#you {
+  width: 30px;
+  margin-left: 5px;
+  background-color: #3d5b99;
+  color: #f9f5ec;
+  border: 1px solid #3d5b99;
+  padding: 9px;
+  border-radius: 2px;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.iletisim form i#face:hover, .iletisim form i#twit:hover, .iletisim form i#you:hover {
+  cursor: pointer;
+  background-color: #f9f5ec;
+  color: #3d5b99;
+  border: 1px solid #3d5b99;
+}
+.iletisim form i#twit {
+  background-color: #42cbd5;
+  border: 1px solid #42cbd5;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.iletisim form i#twit:hover {
+  color: #42cbd5;
+  border: 1px solid #42cbd5;
+}
+.iletisim form i#you {
+  background-color: #fd3937;
+  border: 1px solid #fd3937;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.iletisim form i#you:hover {
+  color: #fd3937;
+  border: 1px solid #fd3937;
+}
+.iletisim #googleMap {
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+}
+.iletisim input#gonder {
+  margin: 0;
+  padding: 5px;
+  /* include ile cagir */
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #f9f5ec;
+  background-color: #0467b2;
+  width: 80px;
+  color: #f9f5ec;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.iletisim input#gonder:hover {
+  border: 1px solid #0467b2;
+  background-color: #f9f5ec;
+  color: #0467b2;
+}
+.iletisim .footer {
+  width: 100%;
+  height: 100px;
+  background-color: #0467b2;
+}
+.iletisim .footer img {
+  margin: -30px auto;
+  height: 100px;
+  border-radius: 50%;
+}
+.iletisim .footer ul {
+  width: 100%;
+  text-align: center;
+}
+.iletisim .footer ul li {
+  margin-top: 40px;
+  display: inline-block;
+  float: none;
+  padding: 15px;
+}
+.iletisim .footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.iletisim .footer ul li a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #ffffff;
+  height: 3px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.iletisim .footer ul li a:hover:before, .iletisim .footer ul li a:focus:before, .iletisim .footer ul li a:active:before {
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 380px) {
+  .responsive-menu {
+    display: block;
+  }
+
+  .responsive-logo {
+    display: block;
+  }
+
+  .odalarimiz, .odafoto {
+    padding-bottom: 250px;
+  }
+
+  .odafoto {
+    padding: 0 2px;
+  }
+
+  .parallax-window ul#tab {
+    width: 100%;
+  }
+  .parallax-window h4 {
+    margin-top: 20px;
+  }
+  .parallax-window .bgactivity {
+    padding: 20px 20px;
+  }
+
+  .class-bahce-salon {
+    padding-bottom: 25px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+  .footer ul li {
+    margin-top: 0 !important;
+    padding: 4px 12px !important;
+  }
+}
+@media (min-width: 380px) and (max-width: 768px) {
+  .responsive-menu {
+    display: block;
+    width: 55px;
+    height: 55px;
+  }
+  .responsive-menu i {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+
+  .responsive-logo {
+    display: block;
+  }
+  .responsive-logo img {
+    width: 75px;
+  }
+
+  .parallax-window ul#tab {
+    width: 100%;
+  }
+  .parallax-window h4 {
+    margin-top: 20px;
+  }
+  .parallax-window .odalarimiz, .parallax-window .odafoto {
+    padding-bottom: 150px;
+  }
+  .parallax-window .odafoto {
+    padding: 0 2px;
+  }
+  .parallax-window .bgactivity {
+    padding: 25px 25px;
+  }
+
+  .class-bahce-salon {
+    padding-bottom: 25px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+  .footer ul li {
+    margin-top: 0 !important;
+    padding: 6px 15px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .responsive-menu {
+    display: block;
+    width: 80px;
+    height: 80px;
+  }
+  .responsive-menu i {
+    font-size: 35px;
+    margin-top: 15px;
+  }
+
+  .responsive-logo {
+    display: block;
+  }
+  .responsive-logo img {
+    width: 100px;
+  }
+
+  .footer {
+    font-size: 20px;
+  }
+  .footer ul li {
+    margin-top: 0 !important;
+    padding: 10px 20px !important;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-menu {
+    display: none;
+  }
+
+  .responsive-logo {
+    display: none;
+  }
+
+  ul#responsive-ac {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

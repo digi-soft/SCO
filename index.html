@@ -1,108 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sapanca Class Hotel | Ana Sayfa</title>
-    <link rel="stylesheet" href="assets/css/SCO.css">
-    <link rel="stylesheet" href="assets/font-awesome-4.6.2/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-    <script src="assets/js/SCO.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sapanca Class Hotel</title>
+    <link rel="SHORTCUT ICON" href="img/logo/logo.ico">
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slidercss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/slidercss/style1.css" />
+    <link rel="stylesheet" href="css/baguetteBox.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-    <div class="navigation-menu">
-        <div class="navbar">
-            <div class="social-media">
-                <a class="button circle" target="_blank" href="https://www.facebook.com/classotel">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0 0 30 64" class="svg icon replaced-svg"><path d="M30 21l-1.2 11H20v32H6.6V32H0V21h6.6v-6.6C6.6 5.4 10.4 0 21.1 0H30v11h-5.5c-4.1 0-4.4 1.6-4.4 4.4V21H30z"></path></svg>
-                </a>
-                <a class="button circle" target="_blank" href="http://twitter.com/">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0 0 64 52" class="svg icon replaced-svg"><path d="M57.4 13v1.7C57.5 32 44.3 52 20.1 52 12.7 52 5.8 49.8 0 46.1c1.1.1 2.1.2 3.2.2 6.1 0 11.8-2.1 16.3-5.6-5.8-.1-10.6-3.9-12.3-9.1.8.1 1.6.2 2.5.2 1.2 0 2.4-.2 3.5-.4-6-1.2-10.5-6.5-10.5-12.9v-.2c1.7 1 3.8 1.6 5.9 1.7C5 17.6 2.7 13.6 2.7 9c0-2.4.7-4.7 1.8-6.6 6.5 8 16.2 13.2 27 13.7-.2-1-.3-2-.3-3C31.2 5.9 37 0 44.3 0c3.8 0 7.2 1.6 9.6 4.1 3-.6 5.8-1.7 8.3-3.2-1 3-3 5.6-5.8 7.2 2.6-.3 5.2-1 7.6-2-1.8 2.7-4 5-6.6 6.9z"></path></svg>
-                </a>
-                <a class="button circle" target="_blank" href="https://instagram.com/">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0 0 560 560" class="svg icon replaced-svg"><path d="M560 81.758V478.24c0 45.118-36.64 81.76-81.758 81.76H81.758C36.64 560 0 523.357 0 478.24V81.76C0 36.64 36.64 0 81.758 0h396.485C523.36 0 560 36.64 560 81.758zm-58.242 163.24h-62.07c2.46 11.212 3.555 22.97 3.555 35 0 90.235-73.008 163.243-163.242 163.243s-163.24-73-163.24-163.24c0-12.03 1.1-23.79 3.56-35H58.25v245c0 6.56 5.194 11.76 11.757 11.76h420c6.563 0 11.76-5.19 11.76-11.76V245zM175 280c0 57.97 47.03 105 105 105s105-47.03 105-105-47.03-105-105-105c-57.97.002-105 47.033-105 105zM501.758 70c0-6.562-5.195-11.758-11.758-11.758h-70c-6.562 0-11.758 5.195-11.758 11.758v70c0 6.562 5.195 11.758 11.758 11.758h70c6.562 0 11.758-5.195 11.758-11.758V70z"></path></svg>
-                </a>
-                <a class="button circle" target="_blank" href="https://www.pinterest.com/">
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0 0 560 560" class="svg icon replaced-svg"><path d="M491.435 186.53c0 123.338-68.343 215.173-168.988 215.173-34.17 0-65.94-17.62-77.152-38.443 0 0-17.887 72.08-22.158 85.962-13.348 49.388-53.126 98.776-56.33 102.514-2.67 3.204-6.94 1.87-7.74-1.335-.535-6.4-10.68-68.87 1.334-119.59 5.61-25.36 39.78-170.85 39.78-170.85s-9.34-20.29-9.34-49.92c0-46.98 26.43-81.15 60.07-81.15 28.57 0 42.45 21.09 42.45 46.99 0 28.57-18.42 71.55-28.03 111.33-7.47 33.637 17.09 60.868 50.19 60.868 59.53 0 99.31-76.62 99.31-167.12 0-69.142-46.18-120.4-130.28-120.4-95.57 0-155.1 71.013-155.1 150.034 0 28.03 8.28 46.984 20.83 62.2 5.61 6.94 6.41 9.345 4.54 17.087-1.33 6.14-5.07 20.025-6.4 25.1-1.87 8.274-8.27 10.943-15.75 8.274-43.79-18.43-64.08-66.49-64.08-120.15 0-89.165 74.75-196.22 223.99-196.22 120.4 0 198.885 86.765 198.885 179.668z"></path></svg>
-                </a>
-            </div>
-            <div class="logo">
-                <img src="http://www.sapancaclassotel.com/files/sapanca-class-logo.png" alt="">
-            </div>
-            <a class="toggle" href="javascript:void(0)">
-                <span class="label">menu</span>
-                <span class="cheeseburger">&nbsp;</span>
-            </a>
-        </div>
-        <div class="clear"></div>
-        <div class="nav-content">
-         
-            
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Odalarımız</a>
-                    </li>
-                    <li>
-                        <a href="">Bahçemiz</a>
-                    </li>
-                    <li>
-                        <a href="">Salonumuz</a>
-                    </li>
-                    <li>
-                        <a href="">Hakkımızda</a>
-                    </li>
-                    <li>
-                        <a href="">İletişim</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="box-shadow"></div>
-        <div class="footer">
-            <div class="container">
-                <div class="address">
-                    <address>
-                        <strong>info@vesperhotel.com</strong><br>
-                        <strong>+31 71 800 99 88</strong><br> Koningin Astrid Boulevard 46<br> 2202 <abbr>BE</abbr>, Noordwijk,
-                        Netherlands </address>
+
+<!-- Slider -->
+
+<div class="anaslider">
+    <ul class="cb-slideshow">
+        <li><span>Otel</span><div><h3>Otelimiz</h3></div></li>
+        <li><span>Odalar</span><div><h3>Odalarimiz</h3></div></li>
+        <li><span>Class Bahçe</span><div><h3>Class bahçe</h3></div></li>
+        <li><span>Class Salon</span><div><h3>Class Salon</h3></div></li>
+
+        <!--
+
+        <li><span>Image 05</span><div><h3>com·po·sure</h3></div></li>
+        <li><span>Image 06</span><div><h3>se·ren·i·ty</h3></div></li>
+
+        -->
+
+    </ul>
+
+
+</div>
+
+<!-- Menu -->
+
+<div id="header">
+    <div class="responsive-menu">
+        <i class="fa fa-align-justify" aria-hidden="true"></i>
+    </div>
+    <ul id="responsive-ac">
+        <li><a href="index.html" class="anchorLink">Anasayfa</a></li>
+        <li><a href="#hakkimizda" class="anchorLink">Hakkımızda</a></li>
+        <li><a href="#oda" class="anchorLink">Odalarımız</a></li>
+        <li><a href="#csalon" class="anchorLink">Class Bahçe</a></li>
+        <li><a href="#csalon" class="anchorLink">Class Salon</a></li>
+        <li><a href="#iletisim" class="anchorLink">İletişim</a></li>
+    </ul>
+    <div class="responsive-logo img-responsive">
+        <img src="img/logo/logo.png" alt="">
+    </div>
+    <div class="head container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav">
+                    <div class="col-md-5 hidden-sm hidden-xs">
+                        <ul>
+                            <li><a href="index.html" class="anchorLink">Anasayfa</a></li>
+                            <li><a href="#hakkimizda" class="anchorLink">Hakkımızda</a></li>
+                            <li><a href="#oda" class="anchorLink">Odalarımız</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                        <h1 class="logo">
+                            <a href="index.html">
+                                <img class="img-responsive" src="img/logo/logo.png" alt="">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-md-5 hidden-sm hidden-xs">
+                        <ul>
+                            <li><a href="#csalon" class="anchorLink">Class Bahçe</a></li>
+                            <li><a href="#csalon" class="anchorLink">Class Salon</a></li>
+                            <li><a href="#iletisim" class="anchorLink">İletişim</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="ac" style="position:absolute;right:40px;top:40;cursor:pointer;"><i class="fa fa-list-ol" aria-hidden="true" style="font-size:50px;"></i></div>
-</body>
+</div>
 
+<!-- Hakkımızda -->
+
+<div class="kisimiki">
+    <br><br><br>
+    <div class="container" id="hakkimizda">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+            <div class="row">
+                <div class="baslik">
+                    <h3>Hoş Geldiniz</h3>
+                    <br>
+                    <h5>Bir Bakışta Otelimiz</h5>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 cap col-centered center-block">
+                        <i>-----</i> <span class="fa fa-university" aria-hidden="true"><i>-----</i></span>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 text-left">
+                    <div class="altkisim">
+                        <br>
+                        <h4 class="text-center">Tanıtım Vıdeomuzu İzleyin</h4>
+                        <br>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec urna urna.
+                            Nullam feugiat purus mauris. Nullam risus lacus, sodales quis nisi nec,
+                            lacinia consectetur erat. Nunc quis viverra tellus. Quisque viverra mollis sollicitudin.
+                            Phasellus commodo velit at hendrerit molestie. <br><br>
+                            &nbsp;&nbsp;&nbsp;Morbi ante risus, mollis gravida mi id, egestas tempus diam. Ut eu purus ultricies,
+                            egestas ligula mollis, laoreet felis. In congue convallis purus et lobortis.
+                            Curabitur sagittis mi id commodo vulputate. Etiam feugiat arcu felis, at pharetra
+                            risus vehicula nec. Nullam lectus nulla, rhoncus eget sem non, fringilla blandit turpis.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BN99wUnqdfw"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Odalarımız -->
+
+<div class="odalarimiz">
+    <br><br><br>
+    <div class="container" id="oda">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+            <div class="row">
+                <div class="baslik">
+                    <h3>Konaklama</h3>
+                    <br>
+                    <h5>Odalarımız</h5>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 cap col-centered center-block">
+                        <i>-----</i> <span class="fa fa-university" aria-hidden="true"><i>-----</i></span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br><br><br>
+    <div class="odafoto">
+        <!-- Oda bilgileri veya ismi vs. için data-caption yaz -->
+        <ul>
+            <li class="col-xs-12 col-sm-6 col-md-3">
+                <a href="img/oda1.jpg">
+                    <img src="img/oda1.jpg" alt="İlk oda">
+                </a>
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-3">
+                <a href="img/oda2.jpg">
+                    <img src="img/oda2.jpg" alt="İkinci oda">
+                </a>
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-3">
+                <a href="img/oda3.png">
+                    <img src="img/oda3.png" alt="Üçüncü Oda">
+                </a>
+            </li>
+            <li class="col-xs-12 col-sm-6 col-md-3">
+                <a href="img/oda4.jpg">
+                    <img src="img/oda4.jpg" alt="Dördüncü Oda">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="odabilgileri">
+        <br><br><br><br><br><br><br><br>
+        <h3>Tüm Odalarımız Aşağıdaki Olanakları Sunmaktadır</h3>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+            <ul class="ozel">
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Fusce et est et orci auctor vestibulum venenatis et augue.</li>
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Ut tempus massa a egestas congue.</li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+            <ul class="ozel">
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Etiam euismod felis non diam mattis aliquam.</li>
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Nunc eget massa sit amet leo vulputate vulputate.</li>
+                <li><span class="fa fa-university" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Vestibulum condimentum nunc et mi mollis, vitae porta</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Aktiviteler -->
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/parallax.jpg">
+    <br><br><br>
+    <div class="container">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+            <div class="row">
+
+                <div class="baslik">
+                    <h5>Aktiviteler</h5>
+                </div>
+                <br><br><br>
+                <ul id="tab">
+                    <li><i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><br><span>Restorant</span></li>
+                    <li><i class="fa fa-child fa-2x" aria-hidden="true"></i><br><span>SPA</span></li>
+                    <li><i class="fa fa-car fa-2x" aria-hidden="true"></i><br><span>Pick-Up</span></li>
+                    <li><i class="fa fa-music fa-2x" aria-hidden="true"></i><br><span>Bar</span></li>
+                    <li><i class="fa fa-street-view fa-2x" aria-hidden="true"></i><br><span>GYM</span></li>
+                </ul>
+                <div class="clr"></div>
+                <div class="aktivite">
+                    <div class="bgactivity col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="img/1.jpg" alt="">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h4 class="text-center">Restorant</h4>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Donec euismod malesuada tortor, nec semper sem cursus vitae.
+                                    Nulla quis ultricies nibh. Phasellus in faucibus turpis,
+                                    eu scelerisque urna. <br><br>
+                                    Donec fermentum leo at ultrices dictum.
+                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                                    posuere cubilia Curae; Sed quam tellus, vestibulum eget metus non,
+                                    congue varius metus.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aktivite">
+                    <div class="bgactivity col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="img/2.jpg" alt="">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h4 class="text-center">SPA</h4>
+                                <br>
+                                <p>
+                                    Phasellus vitae nibh sed massa sollicitudin iaculis.
+                                    Vestibulum commodo est ut augue consequat, eget scelerisque eros iaculis.
+                                    Curabitur eget libero non risus fermentum laoreet eget id lectus.
+                                    Integer nec consectetur velit. <br><br>
+                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                    cubilia Curae; Aliquam tortor nisi, pulvinar et vestibulum sit amet,
+                                    viverra eget arcu. Aenean tincidunt justo sit amet nisi euismod ultrices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aktivite">
+                    <div class="bgactivity col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="img/4.jpg" alt="">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h4 class="text-center">Pick-Up</h4>
+                                <br>
+                                <p>
+                                    Nullam non metus sed mauris bibendum efficitur non et ante.
+                                    Pellentesque malesuada eros vitae enim porta, faucibus sodales metus fermentum.
+                                    <br><br>
+                                    nteger blandit aliquam hendrerit. Nullam eget fermentum libero, at suscipit mi.
+                                    Sed bibendum volutpat justo, ac auctor diam sodales eget.
+                                    Nunc auctor nisi vel sem interdum euismod. Aenean tempus ut ante vitae fermentum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aktivite">
+                    <div class="bgactivity col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="img/3.JPG" alt="">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h4 class="text-center">Bar</h4>
+                                <br>
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. Ut vel cursus dui. Ut id nibh at nulla
+                                    ornare egestas vel quis sapien.
+                                    <br><br>
+                                    Fusce vitae interdum erat. Nullam lacinia elit sem,
+                                    sit amet ornare urna eleifend in. Etiam aliquet nunc eu ante fermentum maximus.
+                                    Praesent ornare leo et nisi sodales, ac semper diam porttitor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aktivite">
+                    <div class="bgactivity col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-responsive" src="img/1.jpg" alt="">
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <h4 class="text-center">GYM</h4>
+                                <br>
+                                <p>
+                                    Pellentesque eros ipsum, rhoncus eu sodales in, auctor laoreet nibh.
+                                    Pellentesque sodales consequat facilisis. Nulla imperdiet metus at enim pretium,
+                                    at lobortis massa semper.
+                                    <br><br>
+                                    Nulla facilisi. Nunc at nisl ac diam cursus egestas.
+                                    Vestibulum ut velit aliquam, posuere nisi ultricies, lacinia odio.
+                                    Pellentesque pharetra volutpat interdum. Praesent in sapien lacus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Class Salon & Bahçe -->
+
+<div class="class-bahce-salon">
+    <br><br><br>
+    <div class="container" id="csalon">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+            <div class="row">
+                <div class="baslik">
+                    <h3>Class</h3>
+                    <br>
+                    <h5>Class Bahçe-Salon</h5>
+                    <br>
+                    <div class="col-xs-12 col-sm-12 col-md-12 cap col-centered center-block">
+                        <i>-----</i> <span class="fa fa-university" aria-hidden="true"><i>-----</i></span>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 text-left">
+                    <div class="altkisim">
+                        <br>
+                        <h4 class="text-center">Class Bahçe</h4>
+                        <br><br>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec urna urna.
+                            Nullam feugiat purus mauris. Nullam risus lacus, sodales quis nisi nec,
+                            lacinia consectetur erat.
+                            Phasellus commodo velit at hendrerit molestie. <br><br>
+                            &nbsp;&nbsp;&nbsp;Morbi ante risus, mollis gravida mi id, egestas tempus diam. Ut eu purus ultricies,
+                            egestas ligula mollis, laoreet felis. In congue convallis purus et lobortis.
+                            Curabitur sagittis mi id commodo vulputate. Etiam feugiat arcu felis, at pharetra
+                            Nam magna nulla, feugiat id mauris id, placerat tristique nisl. Donec mi nibh,
+                            rutrum fermentum nisl vitae, varius mollis risus.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6" style="padding: 10px 0">
+                    <img class="img-responsive" src="img/3.JPG" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6" style="padding: 10px 0">
+                    <img class="img-responsive" src="img/4.jpg" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 text-left">
+                    <div class="altkisim">
+                        <br>
+                        <h4 class="text-center">Class Salon</h4>
+                        <br><br>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec urna urna.
+                            Nullam feugiat purus mauris. Nullam risus lacus, sodales quis nisi nec,
+                            lacinia consectetur erat. Nunc quis viverra tellus. Quisque viverra mollis sollicitudin.
+                            Phasellus commodo velit at hendrerit molestie. <br><br>
+                            &nbsp;&nbsp;&nbsp;Morbi ante risus, mollis gravida mi id, egestas tempus diam. Ut eu purus ultricies,
+                            egestas ligula mollis, laoreet felis. In congue convallis purus et lobortis.
+                            Curabitur sagittis mi id commodo vulputate. Etiam feugiat arcu felis, at pharetra
+                            Nam magna nulla, feugiat id mauris id, placerat tristique nisl. Donec mi nibh,
+                            rutrum fermentum nisl vitae, varius mollis risus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- İletişim -->
+
+<div class="iletisim">
+    <br><br><br>
+    <div class="container" id="iletisim">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-centered center-block">
+            <div class="row">
+                <div class="baslik">
+                    <h5>İletişim</h5>
+                    <br>
+                    <p>Sitemizi ziyaret ettiğiniz için teşekkür ederiz.Soru,görüş ve önerilerinizi veya bizle
+                    ilteşime geçebilmek için aşağıdaki formu doldurarak bize iletebilirsiniz.</p>
+                </div>
+                <br><br>
+                    <div class="col-xs-12 col-sm-12 col-md-6 text-left">
+                        <form id="" action="#" method="post" enctype="text/plain">
+                            <div class="row">
+                                <label for="name"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;İsim :</label><br />
+                                <input id="name" class="input" name="isim" type="text" value="" size="30" /><br />
+                            </div>
+                            <div class="row">
+                                <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;E-mail :</label><br />
+                                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                            </div>
+                            <div class="row">
+                                <label for="message"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Mesaj :</label><br />
+                                <textarea id="message" class="input" name="mesaj" rows="7" cols="30"></textarea><br />
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                                    <input id="gonder" type="submit" value="Gönder" />
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                    <a href="https://www.facebook.com/"><i id="face" class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/?lang=tr"><i id="twit" class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://www.youtube.com/"> <i id="you" class="fa fa-youtube" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 text-center" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2998.7403874714273!2d36.3105766!3d41.2709882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccaf15e2e9e3eb%3A0xa055da7f44efdf62!2sSapanca+Class+Hotel!5e0!3m2!1str!2str!4v1462610509027" height="390" frameborder="0" style="border:0;width: 100% ; margin: 0 auto ; padding: 30px" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="footer">
+        <div class="head container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="nav">
+                        <div class="col-md-5 col-sm-6 col-xs-6">
+                            <ul>
+                                <li><a href="index.html" class="anchorLink">Anasayfa</a></li>
+                                <li><a href="#hakkimizda" class="anchorLink">Hakkımızda</a></li>
+                                <li><a href="#oda" class="anchorLink">Odalarımız</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 hidden-sm hidden-xs text-center">
+                            <img class="img-responsive" src="img/logo/footer-logo.png" alt="">
+                        </div>
+                        <div class="col-md-5 col-sm-6 col-xs-6">
+                            <ul>
+                                <li><a href="#csalon" class="anchorLink">Class Bahçe</a></li>
+                                <li><a href="#csalon" class="anchorLink">Class Salon</a></li>
+                                <li><a href="#iletisim" class="anchorLink">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="js/js.js"></script>
+<script src="js/anchor.js"></script>
+<script src="js/baguetteBox.js"></script>
+<script src="js/parallax.js-1.4.2/parallax.js"></script>
+</body>
 </html>

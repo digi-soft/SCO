@@ -1,0 +1,603 @@
+/*  Ornek Kullanim  .box { @include border-radius(10px); }  */
+
+@font-face {
+  font-family: 'Trajan';
+  src: url('../css/font/Trajan%20Pro%20Regular.eot');
+  src: url('../css/font/Trajan%20Pro%20Regular.eot?#iefix') format('embedded-opentype'),
+  url('../css/font/TrajanPro-Regular.woff') format('woff'),
+  url('../css/font/Trajan%20Pro%20Regular.woff2') format('woff2'),
+  url('../css/font/TrajanPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin border-radius($radius) {         /* include ile cagir */
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition .5s;
+  -moz-transition: $transition .5s;
+  -ms-transition: $transition .5s;
+  -o-transition: $transition .5s;
+  transition: $transition .5s;
+}
+
+$header: Montserrat,sans-serif ;
+$icerikbaslik:  Raleway,sans-serif ;
+$icerik:  Lato,sans-serif;
+$renkicerik: #333333;
+$renklogo: #0467b2;
+
+body {
+  background-color:#f9f5ec ;
+}
+
+.clr {
+  clear: both;
+
+}
+
+
+/* Header (Menu) */
+
+#header {
+  position: absolute;
+  top: 0;
+  font-family: $header;
+  background: none;
+  font-size: 15px;
+  line-height: 21px;
+  color: #ffffff;
+  z-index: 9999;
+  width: 100%;
+  .head{
+    .nav {
+      ul {
+        width: 100%;
+        text-align: center;
+        li {
+          margin-top: 40px;
+          display: inline-block;
+          float: none;
+          padding: 15px;
+          a{
+            text-decoration: none;
+            color: #ffffff;
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow: hidden;;
+            &:before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              left: 0;
+              right: 100%;
+              bottom: 0;
+              background: #ffffff;
+              height: 3px;
+              -webkit-transition-property: right;
+              transition-property: right;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+            &:hover:before, &:focus:before, &:active:before {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Menu */
+
+.responsive-menu {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  width: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #00a3e4;
+  padding: 10px;
+  display: none;
+  @include border-radius(2px);
+  &:hover {
+    cursor: pointer;
+  }
+}
+ul#responsive-ac {
+  position: fixed;
+  text-align: center;
+  margin: 0 auto;
+  top:5px;
+  left: 20%;
+  width: 60%;
+  background-color: rgba(67, 67, 67, .7);
+  display: none;
+  padding: 10px 10px ;
+  li{
+    padding: 15px;
+    border-top: 1px solid #f8f8f8;
+    a {
+      color: #fff;
+    }
+  }
+  li:first-child {
+    border-top: none;
+  }
+}
+
+.responsive-logo {
+  display: none;
+  img {
+    position: absolute;
+    width: 50px;
+    right: 5px;
+    top:5px;
+  }
+}
+
+/* Ikinci kisim */
+
+.kisimiki {
+  position: relative;
+  top:25px;
+  background-color: #f9f5ec;
+  padding-bottom: 100px;
+}
+
+.baslik {
+  font-size:20px;
+  h3 {
+    font-family: Roboto, serif;
+    color: $renklogo;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 14px;
+  }
+  h5 {
+    color: $renkicerik;
+    font-family: "Trajan", serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 38px;
+  }
+  i{
+    color: $renklogo;
+  }
+  span {
+    color: $renklogo;
+  }
+}
+
+.altkisim {
+  h4 {
+    color: $renkicerik;
+    font-family: "Trajan",serif;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  p {
+    font-size:15px;
+    color: $renkicerik;
+    font-family: $icerik;
+    line-height: 24px;
+  }
+}
+
+
+/* Odalar */
+
+.odalarimiz {
+  background-color: #ece7dd;
+  padding-bottom: 100px;
+  img {
+    width: 100%;
+    height:199px;
+  }
+}
+
+.odafoto {
+  @extend .odalarimiz;
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.odabilgileri {
+  width: 100%;
+  text-align: center;
+  padding: 57px 0 93px 0;
+  h3 {
+    font-family: "Trajan",serif;
+    font-weight: 400;
+    color:$renklogo;
+    font-size: 22px;
+    padding-bottom: 55px;
+  }
+  ul.ozel {
+    display: table;
+    margin: 0 auto;
+    li {
+      display: block;
+      float: left;
+      position: relative;
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 30px;
+      color: #333;
+      width: 100%;
+      text-align: left;
+      span {
+        color: $renklogo;
+      }
+    }
+  }
+}
+
+
+/* Aktiviteler */
+
+.parallax-window {
+  padding-bottom: 100px;
+  ul#tab{
+    margin: 0 auto;
+    text-align: center;
+    width: 65.7%;
+    li{
+      width: 20%;
+      height: 120px;
+      float: left;
+      margin: auto 0;
+      background-color: #eeefed;
+      color: #343433;
+      &:hover {
+        cursor: pointer;
+        span {
+          color:$renklogo;
+        }
+      }
+      i{
+        margin-top:30px;;
+        padding-bottom: 10px;
+      }
+      span {
+        font-family: Lato, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+    li.aktif {
+      background-color: #fff;
+      span {
+        color: $renklogo;
+      }
+    }
+  }
+  .bgactivity {
+    padding: 70px 70px;
+    background-color:#fff ;
+  }
+  .aktivite {
+    @extend .altkisim ;
+    img {
+      height: 256px;
+      width: 100%;
+    }
+    h4 {
+      color: $renkicerik;
+      font-family: "Trajan",serif;
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+}
+
+
+/* Class Bahce-Salon */
+
+.class-bahce-salon {
+  background-color: #e3ded3;
+  h4 {
+    margin-top: 30px;
+  }
+  img {
+    padding: 30px;
+  }
+}
+
+
+/* Iletisim */
+
+.iletisim {
+  background-color: #f9f5ec;
+  p {
+    font-family: $icerik;
+    color: $renkicerik;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  form {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: $renkicerik;
+    input {
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+    }
+    label {
+      padding: 15px 0 0 0;
+    }
+      i#face {
+        width: 30px;
+        margin-left: 5px;
+        background-color: #3d5b99;
+        color: #f9f5ec;
+        border: 1px solid #3d5b99;
+        padding: 9px;
+        border-radius: 2px;
+        @include transition(all ease-in-out);
+        &:hover {
+        cursor: pointer;
+        background-color: #f9f5ec;
+        color: #3d5b99;
+        border: 1px solid #3d5b99;
+        }
+      }
+    i#twit {
+      @extend #face;
+      background-color: #42cbd5;
+      border: 1px solid #42cbd5;
+      @include transition(all ease-in-out);
+      &:hover {
+        color: #42cbd5;
+        border: 1px solid #42cbd5;
+      }
+    }
+    i#you {
+      @extend #face;
+      background-color: #fd3937;
+      border: 1px solid #fd3937;
+      @include transition(all ease-in-out);
+      &:hover {
+        color: #fd3937;
+        border: 1px solid #fd3937;
+      }
+    }
+
+  }
+  #googleMap {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+  }
+  input#gonder {
+    margin: 0;
+    padding: 5px;
+    @include border-radius(3px);
+    border: 1px solid #f9f5ec;
+    background-color: $renklogo;
+    width: 80px;
+    color: #f9f5ec;
+    @include transition(all ease-in-out);
+    &:hover {
+      border: 1px solid $renklogo;
+      background-color: #f9f5ec;
+      color: $renklogo;
+    }
+  }
+  /* Footer */
+
+  .footer {
+    width: 100%;
+    height: 100px;
+    background-color: $renklogo;
+    img {
+      margin: -30px auto;
+      height: 100px;
+      border-radius: 50%;
+    }
+    ul {
+      width: 100%;
+      text-align: center;
+      li {
+        margin-top: 40px;
+        display: inline-block;
+        float: none;
+        padding: 15px;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -moz-osx-font-smoothing: grayscale;
+          position: relative;
+          overflow: hidden;;
+          &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: #ffffff;
+            height: 3px;
+            -webkit-transition-property: right;
+            transition-property: right;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+          }
+          &:hover:before, &:focus:before, &:active:before {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+                    /* Responsive */
+
+
+
+@media (max-width: 380px) {
+
+  .responsive-menu {
+      display: block;
+  }
+
+  .responsive-logo {
+    display: block;
+  }
+
+  .odalarimiz {
+    padding-bottom: 250px;
+  }
+  .odafoto {
+    padding: 0 2px;
+  }
+
+  .parallax-window {
+    ul#tab{
+      width: 100%;
+    }
+    h4 {
+      margin-top: 20px;
+    }
+    .bgactivity {
+      padding: 20px 20px;
+    }
+  }
+  .class-bahce-salon {
+    padding-bottom: 25px;
+  }
+  .footer {
+    font-size: 14px;
+    ul {
+      li {
+        margin-top: 0!important;
+        padding: 4px 12px!important;
+      }
+    }
+  }
+}
+
+@media (min-width: 380px) and (max-width: 768px) {
+
+  .responsive-menu {
+    display: block;
+    width: 55px;
+    height: 55px;
+    i {
+      font-size: 25px;
+      margin-top: 5px;
+    }
+  }
+
+  .responsive-logo {
+    display: block;
+    img {
+      width: 75px;
+    }
+  }
+
+  .parallax-window {
+    ul#tab{
+      width: 100%;
+    }
+    h4 {
+      margin-top: 20px;
+    }
+      .odalarimiz {
+        padding-bottom: 150px;
+      }
+      .odafoto {
+        padding: 0 2px;
+      }
+      .bgactivity {
+        padding: 25px 25px;
+      }
+    }
+    .class-bahce-salon {
+      padding-bottom: 25px;
+    }
+  .footer {
+    font-size: 16px;
+    ul {
+      li {
+        margin-top: 0!important;
+        padding: 6px 15px!important;
+      }
+    }
+  }
+  }
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .responsive-menu {
+    display: block;
+    width: 80px;
+    height: 80px;
+    i {
+      font-size: 35px;
+      margin-top: 15px;
+    }
+  }
+
+  .responsive-logo {
+    display: block;
+    img {
+      width: 100px;
+    }
+  }
+
+  .footer {
+    font-size: 20px;
+    ul {
+      li {
+        margin-top: 0!important;
+        padding: 10px 20px!important;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .responsive-menu {
+    display: none;
+  }
+
+  .responsive-logo {
+    display: none;
+  }
+
+  ul#responsive-ac {
+    display:none!important; ;
+  }
+}
